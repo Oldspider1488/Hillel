@@ -1,13 +1,11 @@
-word_number = int(input('number of word: '))
-words_list = []
-short_words = []
+word_number = int(input())
+word_list = []
 for item in range(word_number):
-    word = input('words: ')
-    if len(word) >= 10:
-        words_list.append(word)
+    word = input()
+    if len(word) > 10:
+        tmp = (word[0] + str(len(word)-2) + word[-1])
+        word_list.append(tmp)
     else:
-        short_words.append(word)
-for words in short_words:
-    print(words)
-for words in words_list:
-    print(words[0] + str(len(words)) + words[-1])
+        word_list.append(word)
+for item in word_list:
+    print(item)
